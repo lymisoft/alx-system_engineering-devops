@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Transfers a file from our client to a server
+#
+# variables
+if [ $# -lt 4 ]
+then
+  echo "Usage: 0-transfer_file PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY"
+else
+  scp -o StrictHostKeyChecking=no -i "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC01RD0yjHgJOVlwF+dJchYCMd5/dVOFSsUl40ZnrU7oPBI6Ea8MN4A7CgutushnGLwNnGsj03JJlsLywM1HI1CwqxvX0FRGJUc2cnaa4vSECxz2E3xKIyZywWvgp5qu714aanbrHico5UOuBhmyyo/T1Z+VW1JuHrIuRAXywpFww4LACJcpBFkDJX2+AIPDHExAC3HYsJODp7tC7HWaPokjMod6nioQewKla6rKeLbF8xWPQd9qQcPgQ2jt7J4tgAdepc3v9H8mDFwPjhJ691g0FCcyAKHSnIGZ6axSdIMCTY0fB1is15hZpfJR075kRsuk0q4rqJTL2/2cNp1Vhdg119cZ8VtHGRFYhfUJT04oE+Zeu5YxuQmRo99LaZ4OtmojTwRmxkbHke7zdnPGk/mLMvCGq9/g6uUQ6D7y4pkQz/LMsAib+pw6r/1dipBZ5bRdXw3a6/BJk93SdGd1VyjcHruaWGicVNODSXc+uCz6AGQ7IRMjq2aGY0yetv03i8= root@a53fa38a3f3e" "/home/ubuntu" "ubuntu@18.234.192.218":~
+fi
