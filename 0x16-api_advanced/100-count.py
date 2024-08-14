@@ -4,9 +4,11 @@ Module to recursively query the Reddit API and count keyword occurrences in
 hot articles for a given subreddit.
 """
 
-import requests
+
 import re
 from collections import Counter
+
+import requests
 
 
 def count_words(subreddit, word_list, hot_list=None, after=None):
